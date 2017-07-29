@@ -27,26 +27,24 @@ $(document).ready(function() {
 
 					var result = 0;
 					if (i === 0) {
-						$answerOptions.append($('<input type="radio" name="answers" value="' + i + '"checked>' + arrayValues[i] + '</input><br />'));
-						result = 1;
+						$answerOptions.append($('<input type="radio" name="answers" id="a1" value="1">' + arrayValues[i] + '</input><br />'));
 					}
 					else if (i === 1) {
-						$answerOptions.append($('<input type="radio" name="answers" value="' + i + '"checked>' + arrayValues[i] + '</input><br />'));
-						result = 2;
+						$answerOptions.append($('<input type="radio" name="answers" id="a2" value="2">' + arrayValues[i] + '</input><br />'));
 					}
 
-					if (result = 1) {
-						$("#result").text("wrong");
-					}	
 
-					else {
-						$("#result").text("correct");
-					}			
+
+					$("#a1").prop("checked", true);
+					console.log($("#a1").value);
 				}
 
 			
 		});
 	});
+
+	//I still need to figure out how to record the value of the radio buttons then take the button that was clicked and 
+	//add it to a correct or incorrect answers. After that I bascially can just copy and paste for any other questions. 
 		
 
 
